@@ -20,6 +20,7 @@
 
 body {
 	font-family: 'Roboto';
+	background-color: #f0f0f0;
 }
 
 /*GRID*/
@@ -91,7 +92,7 @@ body {
 #content {
 	grid-row: content;
 	grid-column: title / span 2;
-	width: 850px;
+	width: 870px;
 	margin: 0 auto;
 	text-align: center;
 	overflow: auto;
@@ -101,14 +102,44 @@ body {
 	float: left;
 }
 
-.opaciteImg {
-	transition: 0.4s ease-in-out;
+figure {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
 }
 
-.opaciteImg:hover {
-	opacity: 0.3;
-  	filter: alpha(opacity=30); /* For IE8 and earlier */
+img, figcaption {
+    transition: all .25s ease;
 }
+
+img {
+    display: block;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .5em;
+    background: rgba(255, 255, 255, .75);
+    color: #000;
+    text-align: justify;
+    vertical-align: middle;
+    padding: 20px;
+    opacity: 0;
+}
+
+figure:hover img {
+    transform: scale(1.1);
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
 
 /*CONTENU A PROPOS*/
 
@@ -122,6 +153,6 @@ body {
 	color: #3C3C3C;
 }
 
-/*div.hidden {
-	display: none;
+#apropos img {
+	margin: 0 auto;
 }
