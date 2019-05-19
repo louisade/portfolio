@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $('div.hidden').fadeIn(1000).removeClass('hidden');
-});
+    $('div.hidden').hide(0).delay(500).fadeIn(3000);
+		});
