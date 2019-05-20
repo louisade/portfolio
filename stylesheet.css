@@ -51,7 +51,7 @@ body {
 	display: grid;
 	width: 1000px;
 	margin: 0 auto;
-	grid-template-rows: [header] 100px [content] 600px;
+	grid-template-rows: [header] 100px [content] 1fr;
 	grid-template-columns: [title] 1fr [nav] 1fr;
 }
 
